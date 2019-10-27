@@ -1,4 +1,4 @@
-{% set version = "0.1" %}
+{% set version = "0.2" %}
 
 package:
   name: obake
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/bluescarni/obake/archive/v{{ version }}.tar.gz
-  sha256: 946de817940421d8af8c614c289b74dc6e221ea803fc2b3dacc30e63d7dc3246
+  sha256: 476b8238dafd4cdb5adb242e66a988e4fa6df3c29b8ac8702105cb18d391397f
 
 build:
   number: 0
