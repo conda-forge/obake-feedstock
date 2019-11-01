@@ -25,7 +25,7 @@ outputs:
   - name: obake
     build:
       ignore_run_exports:
-        - tbb-devel
+        - tbb
     requirements:
       build:
         - {{ compiler('c') }}
