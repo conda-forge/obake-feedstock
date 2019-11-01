@@ -12,6 +12,14 @@ build:
   number: 1
   skip: true   # [win and vc<14]
 
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+    - clang      # [win]
+    - ninja      # [win]
+
 outputs:
 
   - name: obake
