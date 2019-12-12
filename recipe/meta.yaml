@@ -9,7 +9,7 @@ source:
   sha256: 2dbe54afea067f4b3b829d87b1ded40ca8ffabfefd698d23b0097b6d844d5ada
 
 build:
-  number: 0
+  number: 1
   skip: true   # [win and vc<14]
 
 requirements:
@@ -21,8 +21,18 @@ requirements:
     - ninja      # [win]
 
 outputs:
+
   - name: obake
+    build:
+      ignore_run_exports:
+        - tbb
     requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - cmake
+        - clang      # [win]
+        - ninja      # [win]
       host:
         - abseil-cpp
         - tbb-devel
@@ -51,6 +61,12 @@ outputs:
         - {{ pin_compatible('tbb', max_pin=None) }}
         - {{ pin_compatible('mppp', max_pin="x.x") }}
     requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - cmake
+        - clang      # [win]
+        - ninja      # [win]
       host:
         - abseil-cpp
         - tbb-devel
