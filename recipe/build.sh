@@ -5,7 +5,6 @@ if [[ "$target_platform" == osx-64 ]]; then
     # Workaround for missing C++17 feature when building the tests.
     export CXXFLAGS="$CXXFLAGS -DCATCH_CONFIG_NO_CPP17_UNCAUGHT_EXCEPTIONS"
 else
-    LDFLAGS="-lrt ${LDFLAGS}"
     export ENABLE_BACKTRACE=yes
 fi
 
@@ -19,6 +18,7 @@ cmake \
     -DOBAKE_BUILD_TESTS=yes \
     -DOBAKE_INSTALL_LIBDIR=lib \
     -DOBAKE_WITH_LIBBACKTRACE=$ENABLE_BACKTRACE \
+    -DBoost_NO_BOOST_CMAKE=ON \
     ..
 
 make -j${CPU_COUNT} VERBOSE=1
