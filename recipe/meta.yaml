@@ -9,7 +9,7 @@ source:
   sha256: 185e6e49e97efe516a3a483c6b5d9347fc3627dd57ca433591c3010803c19abf
 
 build:
-  number: 0
+  number: 1
   skip: true   # [win and vc<14]
 
 requirements:
@@ -23,9 +23,6 @@ requirements:
 outputs:
 
   - name: obake
-    build:
-      ignore_run_exports:
-        - tbb
     requirements:
       build:
         - {{ compiler('c') }}
