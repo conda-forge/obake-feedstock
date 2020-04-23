@@ -1,7 +1,7 @@
-diff --git a/YACMACompilerLinkerSettings.cmake b/YACMACompilerLinkerSettings.cmake
+diff --git a/cmake/yacma/YACMACompilerLinkerSettings.cmake b/cmake/yacma/YACMACompilerLinkerSettings.cmake
 index d8c3875..7d7aa1b 100644
---- a/YACMACompilerLinkerSettings.cmake
-+++ b/YACMACompilerLinkerSettings.cmake
+--- a/cmake/yacma/YACMACompilerLinkerSettings.cmake
++++ b/cmake/yacma/YACMACompilerLinkerSettings.cmake
 @@ -44,36 +44,32 @@ endfunction()
  
  # Enable conditionally a CXX flag, if supported by the compiler.
