@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/bluescarni/obake/archive/v{{ version }}.tar.gz
   sha256: 185e6e49e97efe516a3a483c6b5d9347fc3627dd57ca433591c3010803c19abf
+  patches:
+    - cmake_fix.diff
 
 build:
   number: 5
