@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: obake
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/bluescarni/obake/archive/v{{ version }}.tar.gz
-  sha256: 185e6e49e97efe516a3a483c6b5d9347fc3627dd57ca433591c3010803c19abf
+  sha256: 3aa90ce992f8c1650aa06d211874d6cb6ceecafcfe994fe5ba10c53812d8cb07
   patches:
-    - cmake_fix.diff
+    - gcc7_fix.diff
 
 build:
-  number: 5
+  number: 0
   skip: true   # [win and vc<14]
 
 requirements:
