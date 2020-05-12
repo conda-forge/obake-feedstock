@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/bluescarni/obake/archive/v{{ version }}.tar.gz
   sha256: 3aa90ce992f8c1650aa06d211874d6cb6ceecafcfe994fe5ba10c53812d8cb07
+  patches:
+    - gcc7_fix.diff
 
 build:
   number: 0
