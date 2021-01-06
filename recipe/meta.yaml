@@ -9,7 +9,7 @@ source:
   sha256: e45c33c73ecaf6716f7959274625a0705725047389cdf2388241b52965305434
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win and vc<14]
 
 requirements:
@@ -38,6 +38,7 @@ outputs:
         - backtrace    # [linux]
       run:
         - backtrace    # [linux]
+        - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     files:
       - lib/libobake*{{ SHLIB_EXT }}   # [not win]
       - lib/libobake.so.*              # [linux]
@@ -73,7 +74,7 @@ outputs:
       run:
         - abseil-cpp
         - tbb-devel
-        - boost-cpp
+        - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
         - backtrace    # [linux]
         - {{ pin_subpackage("obake", exact=True) }}
     files:
