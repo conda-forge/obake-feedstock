@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c0e2400..a322580 100644
+index a55356e..c8b88bf 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -166,8 +166,18 @@ if(OBAKE_WITH_LIBBACKTRACE)
@@ -24,7 +24,7 @@ index c0e2400..a322580 100644
  # Depend on DbgEng on WIN32, for the stack trace support.
  if(WIN32)
 diff --git a/obake-config.cmake.in b/obake-config.cmake.in
-index 2a6e271..d34a80b 100644
+index 26a7567..72b11a0 100644
 --- a/obake-config.cmake.in
 +++ b/obake-config.cmake.in
 @@ -10,7 +10,18 @@ if(${mp++_VERSION} VERSION_LESS @_OBAKE_MIN_MPPP_VERSION@)
@@ -44,6 +44,6 @@ index 2a6e271..d34a80b 100644
 +else()
 +    message(STATUS "TBB found using config mode.")
 +endif()
- find_package(fmt REQUIRED)
  if(WIN32)
      find_package(DbgEng REQUIRED)
+ endif()
