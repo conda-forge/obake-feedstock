@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/bluescarni/obake/archive/v{{ version }}.tar.gz
   sha256: e45c33c73ecaf6716f7959274625a0705725047389cdf2388241b52965305434
+  patches:
+    - onetbb.diff
 
 build:
-  number: 5
+  number: 6
   skip: true  # [win and vc<14]
 
 requirements:

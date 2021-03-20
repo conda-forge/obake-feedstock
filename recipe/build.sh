@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-if [[ "$target_platform" == osx-64 ]]; then
+if [[ "$target_platform" == osx-* ]]; then
     export ENABLE_BACKTRACE=no
-    # Workaround for missing C++17 feature when building the tests.
-    export CXXFLAGS="$CXXFLAGS -DCATCH_CONFIG_NO_CPP17_UNCAUGHT_EXCEPTIONS"
+    # Workarounds for missing C++17 features.
+    export CXXFLAGS="$CXXFLAGS -DCATCH_CONFIG_NO_CPP17_UNCAUGHT_EXCEPTIONS -fno-aligned-allocation"
 else
     LDFLAGS="-lrt ${LDFLAGS}"
     export ENABLE_BACKTRACE=yes
