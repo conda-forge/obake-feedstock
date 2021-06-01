@@ -7,7 +7,7 @@ Package license: MPL-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/obake-feedstock/blob/master/LICENSE.txt)
 
-Summary: A C++17 library for the symbolic manipulation of sparse polynomials and other closely-related mathematical objects
+Summary: A C++20 library for the symbolic manipulation of sparse polynomials and other closely-related mathematical objects
 
 Current build status
 ====================
@@ -70,6 +70,7 @@ Installing `obake` from the `conda-forge` channel can be achieved by adding `con
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `obake, obake-devel` can be installed with:
