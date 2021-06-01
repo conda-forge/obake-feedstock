@@ -1,4 +1,4 @@
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: obake
@@ -6,12 +6,10 @@ package:
 
 source:
   url: https://github.com/bluescarni/obake/archive/v{{ version }}.tar.gz
-  sha256: e45c33c73ecaf6716f7959274625a0705725047389cdf2388241b52965305434
-  patches:
-    - onetbb.diff
+  sha256: e3b8c7aca711ba5f6aed609f96260bbb243b10c6a810488d32b38553707330ba
 
 build:
-  number: 6
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
@@ -33,6 +31,7 @@ outputs:
         - clang      # [win]
         - ninja      # [win]
       host:
+        - fmt
         - abseil-cpp
         - tbb-devel
         - mppp
@@ -60,6 +59,7 @@ outputs:
         - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
         - {{ pin_compatible('tbb', max_pin=None) }}
         - {{ pin_compatible('mppp', max_pin="x.x") }}
+        - {{ pin_compatible('fmt', max_pin="x") }}
     requirements:
       build:
         - {{ compiler('c') }}
@@ -71,6 +71,7 @@ outputs:
         - abseil-cpp
         - tbb-devel
         - mppp
+        - fmt
         - boost-cpp
         - backtrace    # [linux]
       run:
@@ -95,7 +96,7 @@ about:
   home: https://bluescarni.github.io/obake/
   license: MPL-2.0
   license_file: LICENSE
-  summary: A C++17 library for the symbolic manipulation of sparse polynomials and other closely-related mathematical objects
+  summary: A C++20 library for the symbolic manipulation of sparse polynomials and other closely-related mathematical objects
 
 extra:
   recipe-maintainers:
