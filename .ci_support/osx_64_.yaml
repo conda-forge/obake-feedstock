@@ -1,7 +1,9 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
+- '10.13'
+MACOSX_SDK_VERSION:
+- '10.13'
 abseil_cpp:
-- '20200923.3'
+- '20210324.1'
 boost_cpp:
 - 1.74.0
 c_compiler:
@@ -16,6 +18,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '11'
+fmt:
+- '7'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pin_run_as_build:

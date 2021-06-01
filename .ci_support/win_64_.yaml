@@ -1,5 +1,5 @@
 abseil_cpp:
-- '20200923.3'
+- '20210324.1'
 boost_cpp:
 - 1.74.0
 c_compiler:
@@ -10,6 +10,8 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2017
+fmt:
+- '7'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
