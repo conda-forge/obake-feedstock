@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 MACOSX_SDK_VERSION:
 - '10.13'
 abseil_cpp:
-- '20210324.1'
+- '20210324.2'
 boost_cpp:
 - 1.74.0
 c_compiler:
