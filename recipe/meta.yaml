@@ -9,7 +9,7 @@ source:
   sha256: e3b8c7aca711ba5f6aed609f96260bbb243b10c6a810488d32b38553707330ba
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win and vc<14]
 
 requirements:
@@ -17,6 +17,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - make       # [unix]
     - clang      # [win]
     - ninja      # [win]
 
@@ -28,6 +29,7 @@ outputs:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - cmake
+        - make       # [unix]
         - clang      # [win]
         - ninja      # [win]
       host:
@@ -66,6 +68,7 @@ outputs:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - cmake
+        - make       # [unix]
         - clang      # [win]
         - ninja      # [win]
       host:
