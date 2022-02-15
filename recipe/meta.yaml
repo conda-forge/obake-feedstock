@@ -29,6 +29,7 @@ outputs:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - cmake
+        - make       # [unix]
         - clang      # [win]
         - ninja      # [win]
       host:
@@ -67,6 +68,7 @@ outputs:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - cmake
+        - make       # [unix]
         - clang      # [win]
         - ninja      # [win]
       host:
