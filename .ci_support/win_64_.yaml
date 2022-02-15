@@ -1,11 +1,11 @@
 abseil_cpp:
-- '20210324.2'
+- '20211102.0'
 boost_cpp:
 - 1.74.0
 c_compiler:
 - vs2017
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
