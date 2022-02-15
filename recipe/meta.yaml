@@ -17,6 +17,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - make       # [unix]
     - clang      # [win]
     - ninja      # [win]
 
