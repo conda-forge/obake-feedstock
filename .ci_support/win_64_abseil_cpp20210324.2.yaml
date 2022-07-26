@@ -1,5 +1,5 @@
 abseil_cpp:
-- '20220623.0'
+- '20210324.2'
 boost_cpp:
 - 1.74.0
 c_compiler:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - vs2017
 fmt:
-- '8'
+- '9'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
