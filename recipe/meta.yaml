@@ -75,7 +75,7 @@ outputs:
         - libabseil
         - tbb-devel
         - mppp
-        - fmt
+        - fmt 8
         - boost-cpp
         - backtrace    # [linux]
       run:
