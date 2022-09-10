@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-LDFLAGS="-lrt ${LDFLAGS}"
+if [[ "$target_platform" == linux* ]]; then
+    LDFLAGS="-lrt ${LDFLAGS}"
+fi
 export ENABLE_BACKTRACE=yes
 
 mkdir build
