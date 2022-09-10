@@ -32,7 +32,8 @@ outputs:
         - clang      # [win]
         - ninja      # [win]
       host:
-        - fmt
+        # obake is not yet compatible with fmt 9
+        - fmt 8
         - libabseil
         - tbb-devel
         - mppp
