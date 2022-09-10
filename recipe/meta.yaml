@@ -9,8 +9,7 @@ source:
   sha256: e3b8c7aca711ba5f6aed609f96260bbb243b10c6a810488d32b38553707330ba
 
 build:
-  number: 6
-  skip: true  # [win and vc<14]
+  number: 7
 
 requirements:
   build:
@@ -34,7 +33,7 @@ outputs:
         - ninja      # [win]
       host:
         - fmt
-        - abseil-cpp
+        - libabseil
         - tbb-devel
         - mppp
         - boost-cpp
@@ -72,14 +71,13 @@ outputs:
         - clang      # [win]
         - ninja      # [win]
       host:
-        - abseil-cpp
+        - libabseil
         - tbb-devel
         - mppp
         - fmt
         - boost-cpp
         - backtrace    # [linux]
       run:
-        - abseil-cpp
         - tbb-devel
         - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
         - backtrace    # [linux]
