@@ -8,7 +8,6 @@ cd build
 
 cmake \
     -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_CXX_STANDARD=17 \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DOBAKE_BUILD_TESTS=yes \
