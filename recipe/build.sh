@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 
-if [[ "$target_platform" == osx-* ]]; then
-    export ENABLE_BACKTRACE=no
-    # Workarounds for missing C++17 features.
-    export CXXFLAGS="$CXXFLAGS -DCATCH_CONFIG_NO_CPP17_UNCAUGHT_EXCEPTIONS -fno-aligned-allocation"
-else
-    LDFLAGS="-lrt ${LDFLAGS}"
-    export ENABLE_BACKTRACE=yes
-fi
+LDFLAGS="-lrt ${LDFLAGS}"
+export ENABLE_BACKTRACE=yes
 
 mkdir build
 cd build
