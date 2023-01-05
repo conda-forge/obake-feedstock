@@ -16,6 +16,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '14'
+fmt:
+- '9'
 libabseil:
 - '20220623.0'
 macos_machine:
