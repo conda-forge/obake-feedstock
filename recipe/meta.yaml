@@ -1,4 +1,4 @@
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: obake
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/bluescarni/obake/archive/v{{ version }}.tar.gz
-  sha256: e3b8c7aca711ba5f6aed609f96260bbb243b10c6a810488d32b38553707330ba
+  sha256: f1d6c208da8ec2945adc8bb1c11b1ae5dcf9f2e75ca22f7cf2928d629fad7711
 
 build:
-  number: 9
+  number: 0
 
 requirements:
   build:
@@ -32,11 +32,10 @@ outputs:
         - clang      # [win]
         - ninja      # [win]
       host:
-        # obake is not yet compatible with fmt 9
-        - fmt 8
+        - fmt
         - libabseil
         - tbb-devel
-        - mppp
+        - mppp >=0.27
         - boost-cpp
         - backtrace    # [linux]
       run:
@@ -74,8 +73,8 @@ outputs:
       host:
         - libabseil
         - tbb-devel
-        - mppp
-        - fmt 8
+        - mppp >=0.27
+        - fmt
         - boost-cpp
         - backtrace    # [linux]
       run:
