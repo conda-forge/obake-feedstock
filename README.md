@@ -1,11 +1,11 @@
-About obake
-===========
+About obake-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/obake-feedstock/blob/main/LICENSE.txt)
 
 Home: https://bluescarni.github.io/obake/
 
 Package license: MPL-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/obake-feedstock/blob/main/LICENSE.txt)
 
 Summary: A C++20 library for the symbolic manipulation of sparse polynomials and other closely-related mathematical objects
 
@@ -38,6 +38,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8214&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/obake-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8214&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/obake-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr><tr>

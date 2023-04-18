@@ -12,7 +12,7 @@ fi
 mkdir build
 cd build
 
-cmake \
+cmake ${CMAKE_ARGS} \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
@@ -24,6 +24,8 @@ cmake \
 
 make -j${CPU_COUNT} VERBOSE=1
 
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
 ctest --output-on-failure -j${CPU_COUNT}
+fi
 
 make install
