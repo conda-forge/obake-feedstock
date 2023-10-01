@@ -1,5 +1,3 @@
-boost_cpp:
-- 1.78.0
 c_compiler:
 - gcc
 c_compiler_version:
@@ -20,9 +18,8 @@ fmt:
 - '10'
 libabseil:
 - '20230125'
-pin_run_as_build:
-  boost-cpp:
-    max_pin: x.x.x
+libboost_devel:
+- '1.82'
 target_platform:
 - linux-64
 tbb_devel:
