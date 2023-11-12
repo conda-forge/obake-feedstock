@@ -1,0 +1,48 @@
+diff --git a/include/obake/polynomials/d_packed_monomial.hpp b/include/obake/polynomials/d_packed_monomial.hpp
+index b3d3916..b0e0c69 100644
+--- a/include/obake/polynomials/d_packed_monomial.hpp
++++ b/include/obake/polynomials/d_packed_monomial.hpp
+@@ -433,7 +433,7 @@ inline void key_tex_stream_insert(::std::ostream &os, const d_packed_monomial<T,
+ 
+                 // Raise to power, if the exponent is not one.
+                 if (!tmp_mp.is_one()) {
+-                    *cur_oss << fmt::format("^{{{}}}", tmp_mp);
++                    *cur_oss << fmt::format(fmt::runtime("^{{{}}}"), tmp_mp);
+                 }
+             }
+         }
+diff --git a/src/polynomials/packed_monomial.cpp b/src/polynomials/packed_monomial.cpp
+index 50effc5..19ef718 100644
+--- a/src/polynomials/packed_monomial.cpp
++++ b/src/polynomials/packed_monomial.cpp
+@@ -169,7 +169,7 @@ void packed_monomial_tex_stream_insert(::std::ostream &os, const packed_monomial
+ 
+             // Raise to power, if the exponent is not one.
+             if (!tmp_mp.is_one()) {
+-                *cur_oss << fmt::format("^{{{}}}", tmp_mp);
++                *cur_oss << fmt::format(fmt::runtime("^{{{}}}"), tmp_mp);
+             }
+         }
+     }
+diff --git a/test/power_series_01.cpp b/test/power_series_01.cpp
+index 6bd536b..2c4ce43 100644
+--- a/test/power_series_01.cpp
++++ b/test/power_series_01.cpp
+@@ -1255,5 +1255,5 @@ TEST_CASE("fmt")
+     std::ostringstream oss;
+     oss << s;
+ 
+-    REQUIRE(oss.str() == fmt::format("{}", s));
++    REQUIRE(oss.str() == fmt::format(fmt::runtime("{}"), s));
+ }
+diff --git a/test/series_04.cpp b/test/series_04.cpp
+index 9a14fe1..29966ec 100644
+--- a/test/series_04.cpp
++++ b/test/series_04.cpp
+@@ -254,5 +254,5 @@ TEST_CASE("series fmt test")
+     std::ostringstream oss;
+     oss << s;
+ 
+-    REQUIRE(oss.str() == fmt::format("{}", s));
++    REQUIRE(oss.str() == fmt::format(fmt::runtime("{}"), s));
+ }
