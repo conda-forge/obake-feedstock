@@ -1,5 +1,7 @@
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,7 +13,7 @@ fmt:
 libabseil:
 - '20240116'
 libboost_devel:
-- '1.82'
+- '1.84'
 target_platform:
 - win-64
 tbb_devel:
