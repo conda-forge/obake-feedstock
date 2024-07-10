@@ -11,7 +11,7 @@ source:
     - fmt_fix.diff
 
 build:
-  number: 7
+  number: 8
 
 requirements:
   build:
