@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2019
 fmt:
-- '10'
+- '11'
 libabseil:
 - '20240116'
 libboost_devel:
