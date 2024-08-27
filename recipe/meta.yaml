@@ -103,6 +103,7 @@ about:
   license: MPL-2.0
   license_file: LICENSE
   summary: A C++20 library for the symbolic manipulation of sparse polynomials and other closely-related mathematical objects
+  dev_url: https://github.com/bluescarni/obake
 
 extra:
   recipe-maintainers:
