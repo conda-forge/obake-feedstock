@@ -11,8 +11,10 @@ cxx_compiler:
 fmt:
 - '10'
 libabseil:
-- '20240116'
+- '20240722'
 libboost_devel:
+- '1.84'
+libboost_headers:
 - '1.84'
 target_platform:
 - win-64
