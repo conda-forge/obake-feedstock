@@ -20,8 +20,6 @@ cxx_compiler_version:
 - '17'
 fmt:
 - '10'
-libabseil:
-- '20240722'
 libboost_devel:
 - '1.84'
 libboost_headers:

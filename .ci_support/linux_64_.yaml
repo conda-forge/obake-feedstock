@@ -20,8 +20,6 @@ docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
 - '10'
-libabseil:
-- '20240722'
 libboost_devel:
 - '1.84'
 libboost_headers:
