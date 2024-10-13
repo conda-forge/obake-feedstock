@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: obake
@@ -6,12 +6,10 @@ package:
 
 source:
   url: https://github.com/bluescarni/obake/archive/v{{ version }}.tar.gz
-  sha256: f1d6c208da8ec2945adc8bb1c11b1ae5dcf9f2e75ca22f7cf2928d629fad7711
-  patches:
-    - fmt_fix.diff
+  sha256: 2f265632b5e203d242862b3515390c78efb70367b1088224d2a900b54f132b93
 
 build:
-  number: 8
+  number: 0
 
 requirements:
   build:
@@ -37,10 +35,9 @@ outputs:
         - ninja      # [win]
       host:
         - fmt
-        - libabseil
         - libboost-headers
         - tbb-devel
-        - mppp >=0.27
+        - mppp =1.*
         - backtrace    # [linux]
       run:
         - backtrace    # [linux]
@@ -73,10 +70,9 @@ outputs:
         - clang      # [win]
         - ninja      # [win]
       host:
-        - libabseil
         - libboost-devel
         - tbb-devel
-        - mppp >=0.27
+        - mppp =1.*
         - fmt
         - backtrace    # [linux]
       run:
