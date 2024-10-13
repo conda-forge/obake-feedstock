@@ -15,6 +15,6 @@ cmake --build . -- -v
 
 set PATH=%PATH%;%CD%
 
-ctest --output-on-failure -j${CPU_COUNT}
+ctest --output-on-failure -j%CPU_COUNT%
 
 cmake --build . --target install
