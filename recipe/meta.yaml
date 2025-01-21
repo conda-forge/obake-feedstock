@@ -9,7 +9,7 @@ source:
   sha256: 2f265632b5e203d242862b3515390c78efb70367b1088224d2a900b54f132b93
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -37,7 +37,7 @@ outputs:
         - fmt
         - libboost-headers
         - tbb-devel
-        - mppp =1.*
+        - mppp
         - backtrace    # [linux]
       run:
         - backtrace    # [linux]
@@ -72,7 +72,7 @@ outputs:
       host:
         - libboost-devel
         - tbb-devel
-        - mppp =1.*
+        - mppp
         - fmt
         - backtrace    # [linux]
       run:
