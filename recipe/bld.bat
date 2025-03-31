@@ -2,17 +2,16 @@ mkdir build
 cd build
 
 cmake ^
-    -G "Visual Studio 17 2022" -A x64
-    -DCMAKE_BUILD_TYPE=Release ^
+    -G "Visual Studio 17 2022" -A x64 ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DOBAKE_BUILD_TESTS=yes ^
     ..
 
-cmake --build . -- -v
+cmake --build . --config Release -j1
 
-set PATH=%PATH%;%CD%
+set PATH=%PATH%;%CD%\Release
 
-ctest --output-on-failure -j%CPU_COUNT%
+ctest --output-on-failure -j%CPU_COUNT% -V -C Release
 
-cmake --build . --target install
+cmake --build . --config Release --target install
