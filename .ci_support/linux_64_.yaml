@@ -19,9 +19,9 @@ docker_image:
 fmt:
 - '12.1'
 libboost_devel:
-- '1.88'
+- '1.90'
 libboost_headers:
-- '1.88'
+- '1.90'
 mppp:
 - '2.0'
 target_platform:
